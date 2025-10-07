@@ -1,6 +1,9 @@
-function FindProxyForURL(url, host)
-{
-    var ip = myIpAddress();
-    // Force device to "use" that as proxy, so you can see it in logs
-    return "PROXY " + ip + ":8888";
+function FindProxyForURL(url, host) {
+    var OneProxy = "PROXY 172.29.136.138:3128";
+    var resolved = dnsResolve("172.29.136.138");
+    if (resolved) {
+        return OneProxy;
+    } else {
+        return "SOCKS 172.29.136.138:1080";
+    }
 }
