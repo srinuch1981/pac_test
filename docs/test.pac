@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
     } else {
         return "SOCKS 172.29.136.139:10809";
     }*/
-    if(isInNet(myIpAddress(), "172.18.237.0", "255.255.255.0") && fqdnResolved) {
+    if(isInNet(myIpAddress(), "172.18.237.0", "255.255.255.0")) {
         return OneProxy;
     } else {
         return "SOCKS 172.29.136.139:10809";
