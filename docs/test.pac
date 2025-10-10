@@ -3,6 +3,7 @@ function FindProxyForURL(url, host) {
     //var resolved = dnsResolve("172.29.136.138");
     // var fqdnResolved = dnsResolve("www.google.com")
     var ip = myIpAddress();
+    return "PROXY " + ip + ":3128";
     if(ip == "172.23.224.241") {
         return OneProxy;
     }
