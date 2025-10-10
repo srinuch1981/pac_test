@@ -3,7 +3,9 @@ function FindProxyForURL(url, host) {
     //var resolved = dnsResolve("172.29.136.138");
     // var fqdnResolved = dnsResolve("www.google.com")
     var ip = myIpAddress();
-    
+    if(ip == "172.23.224.242") {
+        return "SOCKS 172.29.136.139:10809";
+    }
     if(isInNet(myIpAddress(), "172.23.224.0", "255.255.255.0") && ip == "172.23.224.242" && fqdnResolved) {
             return OneProxy;
         } else {
